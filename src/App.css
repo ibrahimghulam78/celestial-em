@@ -23,7 +23,7 @@
 
 /* Media query for large screens */
 @media (min-width: 1400px) {
-  .main-sec {
+  .App {
     width: 1450px !important;
     margin: 0 auto;
   }
