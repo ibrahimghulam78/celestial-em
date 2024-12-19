@@ -1,0 +1,496 @@
+.blog-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .blog-container h1 {
+    font-size: 72px;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #BC20B2;
+  }
+  
+  .blog-main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+  }
+  
+  .blog-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .post-content{
+    text-align: left;
+  }
+
+  .blog-title{
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .blog-title a{
+    color: #fff !important;
+    text-decoration: none;
+    font-size: 45px;
+  }
+
+  .post-content .post-excerpt{
+    color: #ADB2B8;
+    font-size: 18px !important;
+    font-family: agencyfb;
+  }
+
+  .post-content .post-meta span{
+    color: #fff;
+    font-size: 18px !important;
+    background-color: #BC20B273;
+    padding: 5px 10px;
+    font-family: agencyfb;
+  }
+
+  .post-content .post-meta{
+    margin-bottom: 10px !important;
+  }
+  
+  .blog-post {
+    background: #2E074F;
+    /* border-radius: 8px; */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+  
+  .post-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .post-content {
+    padding: 20px;
+  }
+  
+  .post-meta {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 10px 0;
+  }
+  
+  .post-meta span {
+    margin-right: 20px;
+  }
+  
+  .read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #BC20B2;
+    color: white;
+    text-decoration: none;
+    /* margin-top: 15px; */
+    font-size: 20px;
+    font-family: agencyfb;
+  }
+  
+  /* Sidebar Styles */
+  .blog-sidebar {
+    background: unset !important;
+    /* border-radius: 8px; */
+    padding: 20px;
+    padding-top: 0px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    height: fit-content;
+  }
+  
+  .sidebar-widget h3 {
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+    /* border-bottom: 2px solid #007bff; */
+  }
+  
+  .recent-posts {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .recent-posts li {
+    margin-bottom: 15px;
+    background-color: #2E074F;
+  }
+  
+  .recent-posts a {
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .recent-posts img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+  }
+
+  .post-info{
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  
+  .post-info h4 {
+    font-size: 20px;
+    color: #ADB2B8;
+    font-family: agencyfb !important;
+  }
+  
+  .post-info span {
+    font-size: 0.8rem;
+    color: #666;
+  }
+
+  /* Add these styles to your existing Blog.css */
+
+.categories-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .categories-list li {
+    /* border-bottom: 1px solid #eee; */
+    padding: 10px 0;
+    width: 47%;
+    text-align: center;
+    background-color: #2E074F;
+    margin-bottom: 15px;
+  }
+  
+  .categories-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .categories-list a {
+    text-decoration: none;
+    color: #ADB2B8;
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.3s ease;
+    padding: 5px 10px;
+    font-size: 20px;
+    font-family: agencyfb;
+    text-align: center;
+  }
+  
+  /* .categories-list a:hover {
+    color: #007bff;
+  } */
+  
+  .post-count {
+    color: #666;
+    font-size: 0.9rem;
+    background: #f5f5f5;
+    padding: 2px 8px;
+    border-radius: 12px;
+  }
+  
+  .sidebar-widget {
+    background: unset;
+    border-radius: 8px;
+    padding: 20px;
+    padding-top: 0px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .sidebar-widget h3 {
+    margin: 0 0 0px 0;
+    padding-bottom: 10px;
+    /* border-bottom: 2px solid #007bff; */
+    font-size: 45px;
+    text-align: left;
+    color: #BC20B2;
+
+  }
+
+  /* Add these styles to your existing Blog.css */
+
+.category-title {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #BC20B2;
+    color: #BC20B2;
+    font-size: 72px;
+  }
+
+  /* Pagination Styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  gap: 10px;
+}
+
+.page-numbers {
+  display: flex;
+  gap: 5px;
+}
+
+.page-number {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.page-number:hover {
+  background: #f0f0f0;
+}
+
+.page-number.active {
+  background: #BC20B2 !important;
+  color: white;
+  border: 0px solid #BC20B2;
+}
+
+.pagination-button {
+  padding: 8px 16px;
+  border: 0px solid #ddd;
+  background: unset;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #ADB2B8;
+  font-family: agencyfb;
+}
+
+.pagination-button.active{
+  background-color: #BC20B2 !important;
+  color: #fff;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background: unset;
+}
+
+.pagination-button:disabled {
+  background: unset;
+  cursor: not-allowed;
+  color: #999;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+  .pagination {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .page-numbers {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .page-number,
+  .pagination-button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .category-title{
+    font-size: 28px;
+  }
+}
+
+/* Search */
+
+/* Add these search styles */
+/* Replace the previous search styles with these */
+.search-widget {
+  margin-bottom: 10px;
+}
+
+.search-container {
+  position: relative;
+  width: 100%;
+  border: 1px solid #BC20B2;
+}
+
+.search-container:focus-visible{
+  outline: none !important;
+  border: 1px solid #BC20B2;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 40px 12px 15px; /* Added padding-right for the icon */
+  border: none;
+  background: none;
+  color: #ADB2B8;
+  font-size: 18px;
+  font-family: agencyfb;
+  transition: all 0.3s ease;
+}
+
+.search-input::placeholder {
+  color: #ADB2B8;
+  opacity: 0.7;
+  font-size: 18px;
+}
+
+.search-input:focus {
+  outline: 1px solid #BC20B2;
+}
+
+.search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ADB2B8;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-size: 18px;
+}
+
+.search-icon:hover {
+  color: #a01c98;
+}
+
+/* Remove the old search-button styles as they're no longer needed */
+
+.search-results-title {
+  color: #ADB2B8;
+  font-size: 24px;
+  margin-bottom: 30px;
+  font-family: agencyfb;
+}
+
+.no-results {
+  background: #2E074F;
+  padding: 30px;
+  text-align: center;
+  color: #ADB2B8;
+}
+
+.no-results h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-family: agencyfb;
+}
+
+.no-results p {
+  font-size: 18px;
+  font-family: agencyfb;
+}
+
+.blog-foot{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.blog-foot .blog-date{
+  margin-top: auto;
+  margin-bottom: auto;
+  color: #ADB2B8;
+  font-family: agencyfb;
+  font-size: 18px;
+}
+
+@media (max-width:600px){
+  .blog-container h1{
+    font-size: 60px;
+  }
+  .blog-main{
+    display: block;
+  }
+  .pagination{
+    flex-direction: row;
+    margin-bottom: 30px;
+  }
+  .blog-posts{
+    padding: 12px;
+  }
+  .sidebar-widget{
+    padding: 12px;
+  }
+  .blog-sidebar{
+    padding: 0px;
+  }
+  .blog-title a{
+    font-size: 27px;
+  }
+  .post-content .post-meta span{
+    font-size: 12px !important;
+  }
+  .read-more{
+    font-size: 18px;
+  }
+  .blog-foot .blog-date{
+    font-size: 12px;
+  }
+  .sidebar-widget h3{
+    font-size: 27px;
+  }
+  .categories-list a{
+    font-size: 18px;
+  }
+  .post-info h4{
+    font-size: 18px;
+  }
+  .desktop-search{
+    display: none;
+  }
+}
+
+@media (min-width:600px){
+  .mobile-search{
+    display: none;
+  }
+}
+
+.main-search-widget {
+  margin: 20px 0;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.main-search-widget .search-container {
+  position: relative;
+  width: 100%;
+}
+
+.main-search-widget .search-input {
+  width: 100%;
+  padding: 12px 40px 12px 15px;
+  border: 0px solid #ddd;
+  font-size: 16px;
+}
+
+.main-search-widget .search-input:focus-visible{
+  outline: none !important;
+  border: 0px solid #BC20B2;
+}
+
+.main-search-widget .search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+}

@@ -1,0 +1,260 @@
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .contact-header {
+    /* text-align: center; */
+    margin-bottom: 50px;
+  }
+  
+  .contact-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .contact-header p {
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  .contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .contact-content p{
+    color: #ADB2B8 !important;
+    font-family: agencyfb;
+  }
+  
+  .contact-info {
+    /* background: #fff; */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-info h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: flex-start;
+    /* margin-bottom: 30px; */
+    padding: 5px;
+    padding-left: 0px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+
+  .contact-info-p{
+    margin-bottom: 30px;
+  }
+
+  .info-details{
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .form-group input, .form-group textarea{
+    background-color: #8E1892;
+    color: #fff !important;
+    font-family: agencyfb;
+  }
+
+  .form-group textarea:focus-visible{
+    outline: none !important;
+  }
+  
+  /* .info-item:hover {
+    background-color: #f8f9fa;
+  } */
+  
+  .icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    color: #BC20B2;
+  }
+  
+  .info-details h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .info-details p {
+    color: #666;
+    line-height: 1.4;
+    text-align: left;
+  }
+
+  .contact-info p{
+    text-align: left;
+  }
+
+  .contact-info h1{
+    text-align: left;
+    font-size: 72px;
+    font-weight: 400;
+    color: #BC20B2;
+  }
+  
+  .contact-form {
+    background: #BC20B2;
+    padding: 30px;
+    /* border-radius: 10px; */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 80%;
+  }
+  
+  .contact-form h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 0px solid #ddd;
+    /* border-radius: 6px; */
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    
+  }
+  
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: #FFFFFF5E;
+  }
+  
+  .submit-btn {
+    width: 20%;
+    padding: 14px;
+    background-color: #2E074F;
+    color: white;
+    border: none;
+    /* border-radius: 6px; */
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: agencyfb;
+  }
+
+  .form-group input:focus-visible{
+    outline: none !important;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-content {
+      grid-template-columns: 1fr;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    .contact-header h1 {
+      font-size: 2rem;
+    }
+
+    .contact-form {
+      /* margin-left: 20px;
+      margin-right: 20px; */
+      width: 100%;
+    }
+
+    .submit-btn{
+      width: 30%;
+    }
+
+    .contact-info{
+      padding: 0px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact-container {
+      padding: 10px;
+    }
+  
+    .contact-header h1 {
+      font-size: 1.8rem;
+    }
+  
+    .info-item {
+      flex-direction: row;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .icon {
+      width: 6%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      color: #BC20B2;
+    }
+
+    .contact-info h1{
+      font-size: 50px;
+      line-height: 50px;
+    }
+  }
+
+  .notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 500;
+    z-index: 1000;
+    animation: slideIn 0.5s ease-in-out;
+  }
+  
+  .success {
+    background-color: #4caf50;
+  }
+  
+  .error {
+    background-color: #f44336;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
