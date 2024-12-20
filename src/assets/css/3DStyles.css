@@ -1987,8 +1987,6 @@
     }
   }
   
-  
-  
   /* Orbits */
   .orbit {
     position: absolute;
@@ -2118,10 +2116,6 @@
     z-index: 1000;
   }
   
-  /* .solar-system-bg {
-    background-color: #08090a !important;
-  } */
-  
   .App {
     width: 100%;
     height: auto;
@@ -2190,10 +2184,6 @@
     background: #0a0a2a;
   }
   
-  /* .solar-system-bg {
-    background: #08090a;
-  } */
-  
   /* Make sure both style.css and App.css are imported in this order */
   
   
@@ -2202,7 +2192,6 @@
     justify-content: center;
     align-items: center;
     min-height: 80vh;
-    /* Set a minimum height */
     width: 100%;
     overflow: hidden;
     position: relative;

@@ -18,12 +18,7 @@ const ImageModal = ({ nft, onClose }) => {
               alt={nft.title}
               className="modal-image"
             />
-            {/* <div className="social-links">
-              <a href="#" className="social-link">Twitter</a>
-              <a href="#" className="social-link">Discord</a>
-              <a href="#" className="social-link">OpenSea</a>
-              <a href="#" className="social-link">Facebook</a>
-            </div> */}
+          
           </div>
 
           <div className="modal-info">

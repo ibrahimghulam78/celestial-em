@@ -13,7 +13,6 @@ function App() {
     <div>
       <div className="App">
         <BrowserRouter>
-          {/* <Header /> */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route className='other-pages' path="/marketplace" element={<Marketplace />} />
@@ -21,7 +20,6 @@ function App() {
             <Route className='other-pages' path="/contact" element={<Contact />} />
           </Routes>
         </BrowserRouter>
-        
       </div>
       <Footer />
     </div>

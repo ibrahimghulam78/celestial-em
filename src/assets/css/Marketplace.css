@@ -34,7 +34,6 @@
   }
   
   .header-content {
-    /* max-width: 1400px; */
     margin: 0 auto;
     height: 100%;
     display: flex;
@@ -44,7 +43,6 @@
   
   .main-content {
     display: flex;
-    /* margin-top: 70px;  */
     min-height: calc(100vh - 70px);
   }
   
@@ -52,12 +50,8 @@
   .sidebar {
     width: 300px;
     height: fit-content;
-    /* height: calc(100vh - 70px);
-    background-color: rgba(0, 0, 0, 0.95); */
-    /* border-right: 1px solid #333; */
     padding: 20px;
     overflow-y: auto;
-    /* position: fixed; */
     left: 0;
     top: 70px;
   }
@@ -100,15 +94,13 @@
     padding: 20px;
     padding-left: 5px;
     padding-right: 5px;
-    margin-top: 30px;
-    /* margin-left: 300px;  */
+    margin-top: 30px !important;
   }
   
   .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
     gap: 20px;
-    /* max-width: 1400px; */
     margin: 0 auto;
   }
   
@@ -326,7 +318,6 @@
   .attribute-card {
     background-color: #D36CCD !important;
     padding: 15px;
-    /* border-radius: 8px; */
   }
 
   .filter-title{
@@ -359,7 +350,6 @@
   }
   
   .main-content {
-    /* padding-top: 80px; */
     min-height: calc(100vh - 80px);
   }
 
@@ -426,7 +416,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* position: sticky; */
     top: 0;
     background-color: #BC20B2;
     z-index: 1;
@@ -465,7 +454,6 @@
     text-decoration: none;
     padding: 8px 16px;
     background-color: #D36CCD;
-    /* border-radius: 20px; */
     font-size: 0.9rem;
     transition: background-color 0.2s;
     font-family: agencyfb;
@@ -490,7 +478,6 @@
   .attribute-card {
     background-color: #D36CCD;
     padding: 15px;
-    /* border-radius: 8px; */
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -550,7 +537,6 @@
   
   #marketplace-modal .modal-content::-webkit-scrollbar-thumb {
     background: #D36CCD;
-    /* border-radius: 3px; */
   }
 
   #marketplace-modal .modal-content button{
@@ -597,16 +583,6 @@
     font-size: 28px;
   }
   
-  /* .toggle-btn.active::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #BC20B2;
-  } */
-  
   .toggle-btn:hover {
     color: #fff !important;
     background-color: #BC20B2;
@@ -615,7 +591,6 @@
   /* Sidebar Latest  */
   /* Add these styles to your existing CSS */
 .filter-section-wrapper {
-  /* margin-bottom: 1rem; */
   border-bottom: 1px solid #BC20B2;
 }
 
@@ -657,7 +632,6 @@
 
 /* Update existing styles */
 .filters-container {
-  /* max-height: calc(100vh - 150px); */
   overflow-y: auto;
 }
 
@@ -713,7 +687,6 @@
   overflow-y: auto;
   background: unset;
   border-right: 0px solid #333;
-  /* margin-top: -90px; */
 }
 
 .collection-toggle .desktop-toggle button{
@@ -840,8 +813,8 @@
   }
 
   .gallery-container {
-    padding-top: 5px;
-    margin-top: 0px;
+    padding-top: 30px !important;
+    margin-top: 0px !important;
   }
 
   .marketplace{
@@ -892,7 +865,6 @@
 }
 
 .filters-container {
-  /* height: calc(100vh - 80px); */
   overflow-y: auto;
   padding-bottom: 20px;
 }
@@ -1107,4 +1079,10 @@
 
 .filter-group-range{
   margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  .gallery-container{
+    padding-top: 30px !important;
+  }
 }

@@ -610,7 +610,6 @@ const GalaxyZoom = () => {
                         </div>
                     )}
                 </div>
-            {/* </div> */}
         </div>
     );
 };

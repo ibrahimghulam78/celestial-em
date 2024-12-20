@@ -57,9 +57,6 @@ const Sidebar = ({ posts, categories = [] }) => {
                   }
                 >
                   {category.name}
-                  {/* <span className="post-count">
-                    ({categoryPostCounts[category.name]})
-                  </span> */}
                 </Link>
               </li>
             ))}

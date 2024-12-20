@@ -105,11 +105,6 @@ function Header() {
             </video>
             <div className="main-sec">
                 <header>
-                    {/* <div className='social-icons desktop-icons'>
-                        <a href='#'><img src={img1} alt="icon" /></a>
-                        <a href='#'><img src={img2} alt="icon" /></a>
-                        <a href='#'><img src={img3} alt="icon" /></a>
-                    </div> */}
                     <div className="logo">
                         <a href="/">
                             <img src={logo} alt="logo" />
@@ -138,11 +133,6 @@ function Header() {
                             </li>
                             <button className="wallet-btn" onClick={() => setShowModal(true)}>Connect Wallet</button>
                         </ul>
-                    
-                        {/* <div className="inner destop-inner">
-                            <a href='#'><img src={img5} alt="icon" /> <span>OpenSea</span></a>
-                            <a href='#'><img src={img4} alt="icon" /> <span>Rarible</span></a>
-                        </div> */}
                     </div>
                     <div className="mob-wallet">
                     <button className="wallet-btn" onClick={() => setShowModal(true)}>Connect Wallet</button>
@@ -168,22 +158,9 @@ function Header() {
                         </button>
                     </nav>
                     <button className="nav-btn" onClick={showNavbar}>
-                        {/* <FaBars /> */}
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </button>
-                    {/* <button onClick={handleConnectWallet}>Connect Wallet</button> */}
                 </header>
-                {/* <div className="header-nav">
-                    <nav>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Roadmap</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">FAQ</a></li>
-                        </ul>
-                    </nav>
-                </div> */}
                 <div id="hero-text">
                     <div className="text">
                         <h1>A GREAT RECKONING APPROACHES</h1>

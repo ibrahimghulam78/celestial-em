@@ -36,9 +36,7 @@ function Footer() {
                 </div>
                     <div className='copyright'>
                         <p>Copyright © 2024 Celestial Empires</p>
-                        {/* <p>Powered by <a href='https://datadove.co.uk/'>DataDove</a></p> */}
                     </div>
-                {/* </div> */}
             </footer>
         </div >
     );
