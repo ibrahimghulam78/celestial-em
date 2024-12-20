@@ -2201,7 +2201,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 80vh;
     /* Set a minimum height */
     width: 100%;
     overflow: hidden;

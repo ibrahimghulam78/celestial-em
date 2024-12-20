@@ -10,16 +10,19 @@ import Blog from './pages/Blog';
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        {/* <Header /> */}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/marketplace" element={<Marketplace />} />
-          <Route path="/blog/*" element={<Blog />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </BrowserRouter>
+    <div>
+      <div className="App">
+        <BrowserRouter>
+          {/* <Header /> */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route className='other-pages' path="/marketplace" element={<Marketplace />} />
+            <Route className='other-pages' path="/blog/*" element={<Blog />} />
+            <Route className='other-pages' path="/contact" element={<Contact />} />
+          </Routes>
+        </BrowserRouter>
+        
+      </div>
       <Footer />
     </div>
   );

@@ -100,7 +100,7 @@ const Marketplace = () => {
   };
 
   return (
-    <div>
+    <div className='other-pages'>
       <OtherPagesHeader />
       <div className="marketplace">
         <div className="collection-toggle">

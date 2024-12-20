@@ -530,7 +530,10 @@ const GalaxyZoom = () => {
                         <hr className="line" />
                     </div>
                 </div>
+            </div>
+            <div className="main-sec">
                 <img className="cosmos-avt" src={avt}></img>
+            </div>
                 <div className={`galaxy-zoom-container ${background}`}>
                     {zoomStage === null && (
                         <>
@@ -607,7 +610,7 @@ const GalaxyZoom = () => {
                         </div>
                     )}
                 </div>
-            </div>
+            {/* </div> */}
         </div>
     );
 };

@@ -70,13 +70,9 @@ const Sidebar = ({ isOpen, onOpen, onClose, filters, onFilterChange }) => {
         className={`filter-header ${expandedFilters[key] ? 'active' : ''}`}
         onClick={() => toggleFilterOptions(key)}
       >
-        <div className="filter-header-content">
           <span className="filter-label">{name}</span>
-          <div className="filter-header-buttons">
-            <span className="selected-value">{filters[key] || 'All'}</span>
+            {/* <span className="selected-value">{filters[key] || ''}</span> */}
             <span className="toggle-icon">{expandedFilters[key] ? '−' : '+'}</span>
-          </div>
-        </div>
       </div>
       {expandedFilters[key] && (
         <div className="filter-options">
@@ -123,7 +119,7 @@ const Sidebar = ({ isOpen, onOpen, onClose, filters, onFilterChange }) => {
               { name: 'Base Power', key: 'basePower' },
               { name: 'Power Rank', key: 'powerRank', max: 1200 }
             ].map(({ name, key, max = 100 }) => (
-              <div key={key} className="filter-group">
+              <div key={key} className="filter-group filter-group-range">
                 <label className="filter-label">
                   {name}
                   <span className="filter-value">

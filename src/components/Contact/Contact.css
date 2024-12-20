@@ -222,6 +222,10 @@
       color: #BC20B2;
     }
 
+    .icon img{
+      width: 26px !important;
+    }
+
     .contact-info h1{
       font-size: 50px;
       line-height: 50px;

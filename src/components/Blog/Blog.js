@@ -195,7 +195,7 @@ const Blog = () => {
         path="/"
         element={
           <div className="blog-container">
-            <h1>Blog</h1>
+            <h1 className='blog-title-main'>Blog</h1>
             <div className="main-search-widget mobile-search">
               <form onSubmit={handleSearchSubmit}>
                 <div className="search-container">

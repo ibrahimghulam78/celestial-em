@@ -33,11 +33,12 @@ function Footer() {
                         </div>
                     </div>
                     <img className="footer-avt" src={avt}></img>
+                </div>
                     <div className='copyright'>
                         <p>Copyright © 2024 Celestial Empires</p>
                         {/* <p>Powered by <a href='https://datadove.co.uk/'>DataDove</a></p> */}
                     </div>
-                </div>
+                {/* </div> */}
             </footer>
         </div >
     );
