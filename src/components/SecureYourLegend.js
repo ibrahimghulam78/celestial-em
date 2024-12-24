@@ -19,6 +19,25 @@ function SecureYourLegend() {
     const [isPopupOpen, setIsPopupOpen] = useState(false); // State for managing popup visibility
     const [popupContent, setPopupContent] = useState({}); // State to store the content (heading and text) for the popup
 
+    // const settings = {
+    //     dots: false,
+    //     infinite: true,
+    //     speed: 500,
+    //     slidesToShow: 4,
+    //     slidesToScroll: 1,
+    //     responsive: [
+    //         {
+    //             breakpoint: 1024,
+    //             settings: {
+    //                 slidesToShow: 1,
+    //                 slidesToScroll: 1,
+    //                 infinite: true,
+    //                 dots: false
+    //             }
+    //         },
+    //     ]
+    // };
+
     const settings = {
         dots: false,
         infinite: true,
@@ -27,14 +46,23 @@ function SecureYourLegend() {
         slidesToScroll: 1,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1024, // Tablet view
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
+                }
+            },
+            {
+                breakpoint: 767, // Mobile view
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     infinite: true,
                     dots: false
                 }
-            },
+            }
         ]
     };
 
@@ -284,7 +312,7 @@ function SecureYourLegend() {
                                     </div>
                                 </div>
                             </div>
-                            <div className='img-slider'>
+                            <div className='img-slider mobile-slider'>
                                 <Slider className='popup-slider' {...settings}>
                                     <div className='slides'>
                                         <div className='chart-table'>
@@ -462,6 +490,196 @@ function SecureYourLegend() {
                                 <div className='account'>
                                     <i class="fa-solid fa-user"></i>
                                     <p>Owner Name</p>
+                                </div>
+                            </div>
+                            <div className='img-slider tablet-slider'>
+                                <Slider className='popup-slider' {...settings}>
+                                    <div className='slides'>
+                                        <div className='chart-table'>
+                                            <div className='first-details'>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <img className='group-icon' src={iconStar5}></img>
+
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>Serves | Character</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Type</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar4}></img>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Family</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar7}></img>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Gender</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar3}></img>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Age</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='slides'>
+                                        <div className='chart-table'>
+                                            <div className='minting-details'>
+                                                <div className='row'>
+                                                    <div className='full-column first-row-minting'>
+                                                        <p className='full-column-left'>Nature</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar2}></img>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar1}></img>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Galaxy</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>System</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Planet</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>City</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='slides'>
+                                        <div className='chart-table'>
+                                            <div className='weapon-details'>
+                                                <div className='row'>
+                                                    <div className='single-column'>
+                                                        <p>Weapon</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>Primary Weapon</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>Secondary Weapon</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='slides'>
+                                        <div className='account-table'>
+                                            <div className='account-first'>
+                                                <div className='row'>
+                                                    <div className='single-column'>
+                                                        <p>Accessories</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>Primary Accessory</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>Secondary Accessory</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Slider>
+                                <div className='universe-tablet'>
+                                    <div className='account'>
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Owner Name</p>
+                                    </div>
+                                    <div className='universe'>
+                                        <div className='universe-left'>
+                                            <p>Universe</p>
+                                            <div className='id'>
+                                                <h2>| 420</h2>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -597,7 +815,7 @@ function SecureYourLegend() {
                                             <p className='full-column-mid'> | </p>
                                             <img className='full-column-right' src={iconStar2}></img>
                                             <p className='full-column-mid'> | </p>
-                                            <img className='full-column-right' src={iconStar1}></img>
+                                            <img className='full-column-right nature-icon' src={iconStar1}></img>
                                         </div>
                                     </div>
                                     <div className='row'>
@@ -714,7 +932,7 @@ function SecureYourLegend() {
                                     </div>
                                 </div>
                             </div>
-                            <div className='img-slider'>
+                            <div className='img-slider mobile-slider'>
                                 <Slider className='popup-slider' {...settings}>
                                     <div className='slides'>
                                         <div className='chart-table'>
@@ -892,6 +1110,196 @@ function SecureYourLegend() {
                                 <div className='account'>
                                     <i class="fa-solid fa-user"></i>
                                     <p>Owner Name</p>
+                                </div>
+                            </div>
+                            <div className='img-slider tablet-slider'>
+                                <Slider className='popup-slider' {...settings}>
+                                    <div className='slides'>
+                                        <div className='chart-table'>
+                                            <div className='first-details'>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <img className='group-icon' src={iconStar5}></img>
+
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>Serves | Character</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Type</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar4}></img>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Family</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar7}></img>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Gender</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar3}></img>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Age</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='slides'>
+                                        <div className='chart-table'>
+                                            <div className='minting-details'>
+                                                <div className='row'>
+                                                    <div className='full-column first-row-minting'>
+                                                        <p className='full-column-left'>Nature</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar2}></img>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar1}></img>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Galaxy</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>System</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Planet</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>City</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='slides'>
+                                        <div className='chart-table'>
+                                            <div className='weapon-details'>
+                                                <div className='row'>
+                                                    <div className='single-column'>
+                                                        <p>Weapon</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>Primary Weapon</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>Secondary Weapon</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='slides'>
+                                        <div className='account-table'>
+                                            <div className='account-first'>
+                                                <div className='row'>
+                                                    <div className='single-column'>
+                                                        <p>Accessories</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>Primary Accessory</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>Secondary Accessory</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Slider>
+                                <div className='universe-tablet'>
+                                    <div className='account'>
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Owner Name</p>
+                                    </div>
+                                    <div className='universe'>
+                                        <div className='universe-left'>
+                                            <p>Universe</p>
+                                            <div className='id'>
+                                                <h2>| 420</h2>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1027,7 +1435,7 @@ function SecureYourLegend() {
                                             <p className='full-column-mid'> | </p>
                                             <img className='full-column-right' src={iconStar2}></img>
                                             <p className='full-column-mid'> | </p>
-                                            <img className='full-column-right' src={iconStar1}></img>
+                                            <img className='full-column-right nature-icon' src={iconStar1}></img>
                                         </div>
                                     </div>
                                     <div className='row'>
@@ -1144,7 +1552,7 @@ function SecureYourLegend() {
                                     </div>
                                 </div>
                             </div>
-                            <div className='img-slider'>
+                            <div className='img-slider mobile-slider'>
                                 <Slider className='popup-slider' {...settings}>
                                     <div className='slides'>
                                         <div className='chart-table'>
@@ -1322,6 +1730,196 @@ function SecureYourLegend() {
                                 <div className='account'>
                                     <i class="fa-solid fa-user"></i>
                                     <p>Owner Name</p>
+                                </div>
+                            </div>
+                            <div className='img-slider tablet-slider'>
+                                <Slider className='popup-slider' {...settings}>
+                                    <div className='slides'>
+                                        <div className='chart-table'>
+                                            <div className='first-details'>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <img className='group-icon' src={iconStar5}></img>
+
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>Serves | Character</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Type</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar4}></img>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Family</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar7}></img>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Gender</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar3}></img>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Age</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='slides'>
+                                        <div className='chart-table'>
+                                            <div className='minting-details'>
+                                                <div className='row'>
+                                                    <div className='full-column first-row-minting'>
+                                                        <p className='full-column-left'>Nature</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar2}></img>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar1}></img>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Galaxy</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>System</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Planet</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>City</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='slides'>
+                                        <div className='chart-table'>
+                                            <div className='weapon-details'>
+                                                <div className='row'>
+                                                    <div className='single-column'>
+                                                        <p>Weapon</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>Primary Weapon</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>Secondary Weapon</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='slides'>
+                                        <div className='account-table'>
+                                            <div className='account-first'>
+                                                <div className='row'>
+                                                    <div className='single-column'>
+                                                        <p>Accessories</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>Primary Accessory</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>Secondary Accessory</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Slider>
+                                <div className='universe-tablet'>
+                                    <div className='account'>
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Owner Name</p>
+                                    </div>
+                                    <div className='universe'>
+                                        <div className='universe-left'>
+                                            <p>Universe</p>
+                                            <div className='id'>
+                                                <h2>| 420</h2>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1457,7 +2055,7 @@ function SecureYourLegend() {
                                             <p className='full-column-mid'> | </p>
                                             <img className='full-column-right' src={iconStar2}></img>
                                             <p className='full-column-mid'> | </p>
-                                            <img className='full-column-right' src={iconStar1}></img>
+                                            <img className='full-column-right nature-icon' src={iconStar1}></img>
                                         </div>
                                     </div>
                                     <div className='row'>
@@ -1574,7 +2172,7 @@ function SecureYourLegend() {
                                     </div>
                                 </div>
                             </div>
-                            <div className='img-slider'>
+                            <div className='img-slider mobile-slider'>
                                 <Slider className='popup-slider' {...settings}>
                                     <div className='slides'>
                                         <div className='chart-table'>
@@ -1752,6 +2350,196 @@ function SecureYourLegend() {
                                 <div className='account'>
                                     <i class="fa-solid fa-user"></i>
                                     <p>Owner Name</p>
+                                </div>
+                            </div>
+                            <div className='img-slider tablet-slider'>
+                                <Slider className='popup-slider' {...settings}>
+                                    <div className='slides'>
+                                        <div className='chart-table'>
+                                            <div className='first-details'>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <img className='group-icon' src={iconStar5}></img>
+
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>Serves | Character</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Type</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar4}></img>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Family</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar7}></img>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Gender</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar3}></img>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Age</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='slides'>
+                                        <div className='chart-table'>
+                                            <div className='minting-details'>
+                                                <div className='row'>
+                                                    <div className='full-column first-row-minting'>
+                                                        <p className='full-column-left'>Nature</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar2}></img>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar1}></img>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Galaxy</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>System</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Planet</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>City</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='slides'>
+                                        <div className='chart-table'>
+                                            <div className='weapon-details'>
+                                                <div className='row'>
+                                                    <div className='single-column'>
+                                                        <p>Weapon</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>Primary Weapon</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>Secondary Weapon</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='slides'>
+                                        <div className='account-table'>
+                                            <div className='account-first'>
+                                                <div className='row'>
+                                                    <div className='single-column'>
+                                                        <p>Accessories</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>Primary Accessory</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>Secondary Accessory</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Slider>
+                                <div className='universe-tablet'>
+                                    <div className='account'>
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Owner Name</p>
+                                    </div>
+                                    <div className='universe'>
+                                        <div className='universe-left'>
+                                            <p>Universe</p>
+                                            <div className='id'>
+                                                <h2>| 420</h2>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1887,7 +2675,7 @@ function SecureYourLegend() {
                                             <p className='full-column-mid'> | </p>
                                             <img className='full-column-right' src={iconStar2}></img>
                                             <p className='full-column-mid'> | </p>
-                                            <img className='full-column-right' src={iconStar1}></img>
+                                            <img className='full-column-right nature-icon' src={iconStar1}></img>
                                         </div>
                                     </div>
                                     <div className='row'>
@@ -2004,7 +2792,7 @@ function SecureYourLegend() {
                                     </div>
                                 </div>
                             </div>
-                            <div className='img-slider'>
+                            <div className='img-slider mobile-slider'>
                                 <Slider className='popup-slider' {...settings}>
                                     <div className='slides'>
                                         <div className='chart-table'>
@@ -2182,6 +2970,196 @@ function SecureYourLegend() {
                                 <div className='account'>
                                     <i class="fa-solid fa-user"></i>
                                     <p>Owner Name</p>
+                                </div>
+                            </div>
+                            <div className='img-slider tablet-slider'>
+                                <Slider className='popup-slider' {...settings}>
+                                    <div className='slides'>
+                                        <div className='chart-table'>
+                                            <div className='first-details'>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <img className='group-icon' src={iconStar5}></img>
+
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>Serves | Character</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Type</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar4}></img>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Family</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar7}></img>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Gender</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar3}></img>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Age</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='slides'>
+                                        <div className='chart-table'>
+                                            <div className='minting-details'>
+                                                <div className='row'>
+                                                    <div className='full-column first-row-minting'>
+                                                        <p className='full-column-left'>Nature</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar2}></img>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar1}></img>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Galaxy</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>System</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Planet</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>City</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='slides'>
+                                        <div className='chart-table'>
+                                            <div className='weapon-details'>
+                                                <div className='row'>
+                                                    <div className='single-column'>
+                                                        <p>Weapon</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>Primary Weapon</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>Secondary Weapon</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='slides'>
+                                        <div className='account-table'>
+                                            <div className='account-first'>
+                                                <div className='row'>
+                                                    <div className='single-column'>
+                                                        <p>Accessories</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>Primary Accessory</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>Secondary Accessory</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Slider>
+                                <div className='universe-tablet'>
+                                    <div className='account'>
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Owner Name</p>
+                                    </div>
+                                    <div className='universe'>
+                                        <div className='universe-left'>
+                                            <p>Universe</p>
+                                            <div className='id'>
+                                                <h2>| 420</h2>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -2317,7 +3295,7 @@ function SecureYourLegend() {
                                             <p className='full-column-mid'> | </p>
                                             <img className='full-column-right' src={iconStar2}></img>
                                             <p className='full-column-mid'> | </p>
-                                            <img className='full-column-right' src={iconStar1}></img>
+                                            <img className='full-column-right nature-icon' src={iconStar1}></img>
                                         </div>
                                     </div>
                                     <div className='row'>
@@ -2434,7 +3412,7 @@ function SecureYourLegend() {
                                     </div>
                                 </div>
                             </div>
-                            <div className='img-slider'>
+                            <div className='img-slider mobile-slider'>
                                 <Slider className='popup-slider' {...settings}>
                                     <div className='slides'>
                                         <div className='chart-table'>
@@ -2612,6 +3590,196 @@ function SecureYourLegend() {
                                 <div className='account'>
                                     <i class="fa-solid fa-user"></i>
                                     <p>Owner Name</p>
+                                </div>
+                            </div>
+                            <div className='img-slider tablet-slider'>
+                                <Slider className='popup-slider' {...settings}>
+                                    <div className='slides'>
+                                        <div className='chart-table'>
+                                            <div className='first-details'>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <img className='group-icon' src={iconStar5}></img>
+
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>Serves | Character</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Type</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar4}></img>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Family</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar7}></img>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Gender</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar3}></img>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Age</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='slides'>
+                                        <div className='chart-table'>
+                                            <div className='minting-details'>
+                                                <div className='row'>
+                                                    <div className='full-column first-row-minting'>
+                                                        <p className='full-column-left'>Nature</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar2}></img>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar1}></img>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Galaxy</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>System</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Planet</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>City</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='slides'>
+                                        <div className='chart-table'>
+                                            <div className='weapon-details'>
+                                                <div className='row'>
+                                                    <div className='single-column'>
+                                                        <p>Weapon</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>Primary Weapon</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>Secondary Weapon</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='slides'>
+                                        <div className='account-table'>
+                                            <div className='account-first'>
+                                                <div className='row'>
+                                                    <div className='single-column'>
+                                                        <p>Accessories</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>Primary Accessory</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>Secondary Accessory</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Slider>
+                                <div className='universe-tablet'>
+                                    <div className='account'>
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Owner Name</p>
+                                    </div>
+                                    <div className='universe'>
+                                        <div className='universe-left'>
+                                            <p>Universe</p>
+                                            <div className='id'>
+                                                <h2>| 420</h2>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -2747,7 +3915,7 @@ function SecureYourLegend() {
                                             <p className='full-column-mid'> | </p>
                                             <img className='full-column-right' src={iconStar2}></img>
                                             <p className='full-column-mid'> | </p>
-                                            <img className='full-column-right' src={iconStar1}></img>
+                                            <img className='full-column-right nature-icon' src={iconStar1}></img>
                                         </div>
                                     </div>
                                     <div className='row'>
@@ -2864,7 +4032,7 @@ function SecureYourLegend() {
                                     </div>
                                 </div>
                             </div>
-                            <div className='img-slider'>
+                            <div className='img-slider mobile-slider'>
                                 <Slider className='popup-slider' {...settings}>
                                     <div className='slides'>
                                         <div className='chart-table'>
@@ -3042,6 +4210,196 @@ function SecureYourLegend() {
                                 <div className='account'>
                                     <i class="fa-solid fa-user"></i>
                                     <p>Owner Name</p>
+                                </div>
+                            </div>
+                            <div className='img-slider tablet-slider'>
+                                <Slider className='popup-slider' {...settings}>
+                                    <div className='slides'>
+                                        <div className='chart-table'>
+                                            <div className='first-details'>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <img className='group-icon' src={iconStar5}></img>
+
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>Serves | Character</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Type</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar4}></img>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Family</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar7}></img>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Gender</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar3}></img>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Age</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='slides'>
+                                        <div className='chart-table'>
+                                            <div className='minting-details'>
+                                                <div className='row'>
+                                                    <div className='full-column first-row-minting'>
+                                                        <p className='full-column-left'>Nature</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar2}></img>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <img className='full-column-right' src={iconStar1}></img>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Galaxy</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>System</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>Planet</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='full-column'>
+                                                        <p className='full-column-left'>City</p>
+                                                        <p className='full-column-mid'> | </p>
+                                                        <p className='full-column-right'>Lorem Ipsum</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='slides'>
+                                        <div className='chart-table'>
+                                            <div className='weapon-details'>
+                                                <div className='row'>
+                                                    <div className='single-column'>
+                                                        <p>Weapon</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>Primary Weapon</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>Secondary Weapon</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='slides'>
+                                        <div className='account-table'>
+                                            <div className='account-first'>
+                                                <div className='row'>
+                                                    <div className='single-column'>
+                                                        <p>Accessories</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>Primary Accessory</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>Secondary Accessory</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                                <div className='row'>
+                                                    <div className='left-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                    <div className='right-column'>
+                                                        <p>-----</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Slider>
+                                <div className='universe-tablet'>
+                                    <div className='account'>
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>Owner Name</p>
+                                    </div>
+                                    <div className='universe'>
+                                        <div className='universe-left'>
+                                            <p>Universe</p>
+                                            <div className='id'>
+                                                <h2>| 420</h2>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

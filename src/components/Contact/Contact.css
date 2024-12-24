@@ -173,10 +173,6 @@
       font-size: 2rem;
     }
 
-    .contact-form {
-      width: 100%;
-    }
-
     .submit-btn{
       width: 30%;
     }
@@ -248,5 +244,31 @@
     to {
       transform: translateX(0);
       opacity: 1;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .contact-info h1{
+      width: 70%;
+    }
+    .contact-info-p{
+      width: 50%;
+    }
+    .contact-form{
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .contact-form {
+      width: 100% !important;
+    }
+    .contact-info h1{
+      width: 100% !important;
+    }
+    .contact-info-p{
+      width: 100% !important;
     }
   }
